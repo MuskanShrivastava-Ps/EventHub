@@ -10,7 +10,7 @@ body {
 
 #booking-page {
     min-height: 100vh;
-    background-color: #f5f7fb;
+    background-color: #F8FAFC;
     padding: 30px;
 }
 
@@ -18,6 +18,12 @@ body {
     display: inline-block;
     text-decoration: none;
     padding: 10px 15px;
+    color: #4F46E5;
+    font-weight: 600;
+}
+
+.back-btn:hover {
+    color: #7C3AED;
 }
 
 .booking-card {
@@ -26,11 +32,13 @@ body {
     padding: 25px;
     border-radius: 10px;
     margin: 80px auto 0;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.10);
 }
 
 .booking-card h2 {
     margin-bottom: 20px;
     text-align: center;
+    color: #0F172A;
 }
 
 .form-group {
@@ -41,5 +49,36 @@ body {
     display: block;
     margin-bottom: 6px;
     font-weight: 600;
+    color: #475569;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
+    outline: none;
+    color: #0F172A;
+    background-color: white;
+}
+
+.form-group input:focus {
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px #EEF2FF;
+}
+
+.booking-card button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #FF6B5E;
+    color: white;
+    font-weight: bold;
+}
+
+.booking-card button:hover {
+    background-color: #F0584B;
 }
 
