@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ticket</title>
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+    <div id="booking-page">
+        <a href="#" class="back-btn">
+            ← Back to Dashboard
+        </a>
+        <div class="booking-card">
+        
+            <h2>Book Your Ticket</h2>
+        
+            <form id="booking-form">
+        
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="fullName" placeholder="Enter your full name">
+                </div>
+        
+        
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+        
+        
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+        
+        
+                <div class="form-group">
+                    <label for="tickets">Number of Tickets</label>
+                    <input type="number" id="tickets" name="tickets" min="1" placeholder="Enter number of tickets">
+                </div>
+        
+        
+                <button type="submit" class="book-ticket-btn">
+                    Book Ticket
+                </button>
+        
+            </form>
+        
+        </div>
+    </div>
+</body>
+</html>
