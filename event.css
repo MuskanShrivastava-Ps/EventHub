@@ -69,6 +69,20 @@ body {
     gap: 10px;
 }
 
+.button{
+    display: flex;
+    gap: 10px;
+}
+
+.filter-button{
+    padding: 3px 10px;
+    border: none;
+    color: white;
+    background-color: #4f46e5;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
 #search-bar input,
 #sort-bar select {
     padding: 10px 12px;
@@ -90,6 +104,11 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.event-card:hover{
+    transform: translateY(-4px);
 }
 
 .event-image {
@@ -155,7 +174,7 @@ body {
     cursor: pointer;
 }
 
-.book-btn:hover {
+.book-btn:hover, .filter-button:hover {
     background-color: #3730a3;
 }
 
