@@ -59,4 +59,3 @@ function createEventCard(card){
 function render(container,data){
     container.innerHTML = data.length==0 ? `<p class="mode">Events Not Found</p>` : data.map(createEventCard).join('');
 }
-

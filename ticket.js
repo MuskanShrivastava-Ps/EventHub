@@ -31,7 +31,7 @@ form.addEventListener('submit',function(event){
 
     const bookcard = {
         eventName: singleCard.name,
-        id: id,
+        id: Date.now(),
         date: singleCard.date,
         ticketStatus: "confirmed",
         fullName: fullname.value,
@@ -50,3 +50,4 @@ backbtn.addEventListener('click',function(){
     window.location.href = 'index.html';
 });
 
+localStorage.removeItem('booking');
