@@ -9,9 +9,13 @@
 <body>
     <div id="events-page">
     <aside id="sidebar">
+        <button class="back-btn">
+            ← Back
+        </button>
         <div class="filter">
             <label>Category:</label>
             <select id="category">
+                <option value="tech" selected>All</option>
                 <option value="tech">Tech</option>
                 <option value="startup">Startup</option>
                 <option value="music">Music</option>
@@ -29,22 +33,24 @@
         <div class="filter">
             <label>Price Range:</label>
             <select id="price">
-                <option value="tech">100-200</option>
-                <option value="startup">200-300</option>
-                <option value="music">300-400</option>
-                <option value="workshop">400-500</option>
-                <option value="sports">500-600</option>
-                <option value="education">600-700</option>
+                <option value="">All Prices</option>
+                <option value="30-100">30 - 100</option>
+                <option value="100-250">100 - 250</option>
+                <option value="250-500">250 - 500</option>
+                <option value="500-1000">500 - 1000</option>
+                <option value="1000-1500">1000 - 1500</option>
+                <option value="1500-2000">1500 - 2000</option>
+                <option value="2000-2500">2000 - 2500</option>
             </select>
         </div>
 
         <div class="filter">
             <label>
-                <input type="checkbox" value="free" id="free">
+                <input type="radio" value="free" id="free" name="radio" checked>
                 Free
             </label>
             <label>
-                <input type="checkbox" value="paid"  id="paid">
+                <input type="radio" value="paid"  id="paid" name="radio">
                 Paid
             </label>
         </div>
@@ -62,8 +68,8 @@
                 <button class="filter-button clear">Clear</button>
                 <div class="control" id="sort-bar">
                     <label id="sort">Sort</label>
-                    <select>
-                        <option value="newest">Newest-Event</option>
+                    <select id="sort-bar-select">
+                        <option value="newest">Latest-Event</option>
                         <option value="oldest">Oldest-Event</option>
                         <option value="lowest">Lowest-Price</option>
                         <option value="highest">Highest-Price</option>
@@ -132,6 +138,8 @@
     </section>
 
     </div>
+<script src="render.js"></script>
+<script src="eventsData.js"></script>
 <script src="events.js"></script>
 </body>
 </html>
