@@ -11,7 +11,7 @@
 <body>
     <div class="my-bookings-page">
 
-        <button class="back-btn">← Back</button>
+        <button class="back-btn">←Back</button>
 
         <h1>My Bookings</h1>
 
@@ -28,8 +28,8 @@
                     <p>Email: muskan@example.com</p>
                     <p>Phone: 9876543210</p>
                 </div>
-                <div class="booking-actions"> <button>View Details</button> <button>Edit</button>
-                    <button>Cancel</button>
+                <div class="booking-actions"> <button class="details">View Details</button> <button id="edit">Edit</button>
+                    <button id="cancel">Cancel</button>
                 </div>
             </div>
 
@@ -92,13 +92,46 @@
                     <p>Email: muskan@example.com</p>
                     <p>Phone: 9876543210</p>
                 </div>
-                <div class="booking-actions"> <button>View Details</button> <button>Edit</button>
-                    <button>Cancel</button>
+                <div class="booking-actions"> <button>View Details</button> <button class="edit">Edit</button>
+                    <button class="cancel">Cancel</button>
                 </div>
             </div>
 
         </div>
     </div>
+    
+    <div class="edit-overlay" id="edit-overlay">
+        <div class="edit-popup">
+            <h2>Edit Booking</h2>
+    
+            <form id="edit-form">
+                <div class="form-group">
+                    <label for="edit-name">Full Name</label>
+                    <input type="text" id="edit-name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="edit-email">Email</label>
+                    <input type="email" id="edit-email" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="edit-phone">Phone Number</label>
+                    <input type="tel" id="edit-phone" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="edit-tickets">Number of Tickets</label>
+                    <input type="number" id="edit-tickets" min="1" required>
+                </div>
+    
+                <div class="edit-actions">
+                    <button type="button" class="close-btn">Close</button>
+                    <button type="submit" class="save-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="myBookings.js"></script>
 </body>
-
-</html>
+</html>  

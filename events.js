@@ -1,5 +1,8 @@
 const data = events;
-localStorage.setItem('events',JSON.stringify(data));
+if (JSON.parse(localStorage.getItem('events'))==[]){
+    localStorage.setItem('events',JSON.stringify(data));
+}
+
 const container = document.querySelector('#event-card-template');
 const searchField = document.querySelector('#search-bar input');
 const updatedData = JSON.parse(localStorage.getItem('events'));
@@ -9,7 +12,6 @@ const page = document.querySelector('#main-container');
 const back = document.querySelector('.back-btn');
 
 console.log(updatedData);
-
 
 render(container, updatedData);
 

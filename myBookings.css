@@ -113,25 +113,134 @@ body {
     transition: all 0.3s ease;
 }
 
-.booking-actions button:first-child {
+.booking-actions .details{
     background: linear-gradient(135deg, #4f46e5, #7c3aed);
     color: #ffffff;
 }
 
-.booking-actions button:first-child:hover {
+.booking-actions .details:hover {
     box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
     transform: translateY(-2px);
 }
 
-.booking-actions button:last-child {
+.booking-actions .cancel{
     background: #ffffff;
     color: #ff6b6b;
     border: 1.5px solid #ff6b6b;
 }
 
-.booking-actions button:last-child:hover {
+.booking-actions .cancel:hover {
     background: #ff6b6b;
     color: #ffffff;
     transform: translateY(-2px);
 }
+
+.mode{
+    color:#1e1b4b;
+    margin-top: 10px;
+    background-color: #c4b5fd;
+    padding: 5px 10px;
+    border-radius: 9px;
+}
+
+.edit-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 27, 75, 0.45);
+    backdrop-filter: blur(4px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.edit-overlay.active {
+    display: flex;
+}
+
+.edit-popup {
+    background: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    padding: 28px;
+    border-radius: 16px;
+    border-top: 5px solid #7c3aed;
+    box-shadow: 0 10px 40px rgba(79, 70, 229, 0.3);
+}
+
+.edit-popup h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #4f46e5;
+}
+
+.edit-popup .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.edit-popup label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e1b4b;
+}
+
+.edit-popup input {
+    padding: 10px 12px;
+    border: 1px solid #ddd6fe;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-popup input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+.edit-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.edit-actions button {
+    flex: 1;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-btn {
+    background: #ffffff;
+    color: #ff6b6b;
+    border: 1.5px solid #ff6b6b;
+}
+
+.close-btn:hover {
+    background: #ff6b6b;
+    color: #ffffff;
+}
+
+.save-btn {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
+}
+
+.save-btn:hover {
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+    transform: translateY(-2px);
+}
+
+
 

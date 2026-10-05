@@ -8,7 +8,6 @@ function getcard(datavalue, id){
 }
 
 form.addEventListener('submit',function(event){
-    console.log("Events");
     event.preventDefault();
     const fullname = document.querySelector('#full-name');
     const email = document.querySelector('#email');
@@ -17,13 +16,11 @@ form.addEventListener('submit',function(event){
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     if (!id) {
-        console.log("id")
         return;
     }
     let singleCard = getcard(data, id);
 
     if (!singleCard) {
-        console.log("singlecard")
         return;
     }
 
@@ -31,7 +28,8 @@ form.addEventListener('submit',function(event){
 
     const bookcard = {
         eventName: singleCard.name,
-        id: Date.now(),
+        id: id,
+        uniqueId: Date.now(),
         date: singleCard.date,
         ticketStatus: "confirmed",
         fullName: fullname.value,
@@ -42,12 +40,22 @@ form.addEventListener('submit',function(event){
 
     booking.push(bookcard);
     localStorage.setItem('booking', JSON.stringify(booking));
-    console.log("push");
+
+    const eventdata = JSON.parse(localStorage.getItem('events'));
+    const findcard = eventdata.find((card) => card.bookingId===id);
+
+    if(!findcard){
+        return;
+    }
+
+    findcard.availableSeats = findcard.availableSeats - ticket.value;
+    localStorage.setItem('events',JSON.stringify(eventdata));
+
     form.reset();
+    console.log("true");
 });
 
 backbtn.addEventListener('click',function(){
-    window.location.href = 'index.html';
+    window.history.back();
 });
 
-localStorage.removeItem('booking');
